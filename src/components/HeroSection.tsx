@@ -1,19 +1,25 @@
 import { motion } from "framer-motion";
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  customVideoUrl?: string | null;
+}
+
+const HeroSection = ({ customVideoUrl }: HeroSectionProps) => {
+  const videoSrc = customVideoUrl || "/hero-video.mp4";
+
   return (
     <section className="relative h-screen w-full overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <video
+          key={videoSrc}
           autoPlay
           loop
           muted
           playsInline
           className="h-full w-full object-cover"
-        >
-          <source src="/hero-video.mp4" type="video/mp4" />
-        </video>
+          src={videoSrc}
+        />
         {/* Overlay gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/50 to-background" />
       </div>
