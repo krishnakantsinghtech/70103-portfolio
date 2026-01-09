@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import heroVideo from "@/assets/hero-video.mp4";
 
 const HeroSection = () => {
   return (
@@ -13,7 +12,7 @@ const HeroSection = () => {
           playsInline
           className="h-full w-full object-cover"
         >
-          <source src={heroVideo} type="video/mp4" />
+          <source src="/hero-video.mp4" type="video/mp4" />
         </video>
         {/* Overlay gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/50 to-background" />
