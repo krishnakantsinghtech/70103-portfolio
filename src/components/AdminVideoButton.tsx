@@ -16,9 +16,9 @@ const AdminVideoButton = ({ onVideoChange, currentVideo }: AdminVideoButtonProps
     const file = e.target.files?.[0];
     if (!file) return;
 
-    // Check file size (limit to 10MB for localStorage)
-    if (file.size > 10 * 1024 * 1024) {
-      alert("Video must be under 10MB for local storage");
+    // Check file size (limit to 100MB for localStorage)
+    if (file.size > 100 * 1024 * 1024) {
+      alert("Video must be under 100MB");
       return;
     }
 
@@ -86,7 +86,7 @@ const AdminVideoButton = ({ onVideoChange, currentVideo }: AdminVideoButtonProps
               </div>
 
               <p className="text-muted-foreground text-sm mb-6">
-                Upload a video (max 10MB) to replace the hero background.
+                Upload a video (max 100MB) to replace the hero background.
               </p>
 
               <input
