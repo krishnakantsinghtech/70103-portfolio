@@ -17,11 +17,17 @@ const HeroSection = ({ customVideoUrl }: HeroSectionProps) => {
           loop
           muted
           playsInline
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover brightness-100 contrast-105 saturate-110"
           src={videoSrc}
+          style={{ 
+            objectPosition: 'center center',
+            filter: 'brightness(1.05) contrast(1.05)'
+          }}
         />
-        {/* Overlay gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/50 to-background" />
+        {/* Subtle vignette overlay for cinematic look */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(0,0,0,0.3)_100%)]" />
+        {/* Bottom gradient fade */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
       </div>
 
       {/* Content */}
