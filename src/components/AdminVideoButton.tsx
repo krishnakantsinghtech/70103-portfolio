@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Settings, Upload, X, RotateCcw } from "lucide-react";
+import { saveVideo, deleteVideo } from "@/lib/videoStorage";
 
 interface AdminVideoButtonProps {
   onVideoChange: (videoUrl: string | null) => void;
@@ -12,36 +13,38 @@ const AdminVideoButton = ({ onVideoChange, currentVideo }: AdminVideoButtonProps
   const [isUploading, setIsUploading] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
 
-    // Check file size (limit to 100MB for localStorage)
+    // Check file size (limit to 100MB)
     if (file.size > 100 * 1024 * 1024) {
       alert("Video must be under 100MB");
       return;
     }
 
     setIsUploading(true);
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      const dataUrl = event.target?.result as string;
-      localStorage.setItem("custom-hero-video", dataUrl);
-      onVideoChange(dataUrl);
-      setIsUploading(false);
+    try {
+      await saveVideo(file);
+      const videoUrl = URL.createObjectURL(file);
+      onVideoChange(videoUrl);
       setIsOpen(false);
-    };
-    reader.onerror = () => {
-      alert("Failed to read video file");
+    } catch (error) {
+      console.error("Failed to save video:", error);
+      alert("Failed to save video. Please try again.");
+    } finally {
       setIsUploading(false);
-    };
-    reader.readAsDataURL(file);
+    }
   };
 
-  const handleReset = () => {
-    localStorage.removeItem("custom-hero-video");
-    onVideoChange(null);
-    setIsOpen(false);
+  const handleReset = async () => {
+    try {
+      await deleteVideo();
+      onVideoChange(null);
+      setIsOpen(false);
+    } catch (error) {
+      console.error("Failed to delete video:", error);
+    }
   };
 
   return (
