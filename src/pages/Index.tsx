@@ -4,15 +4,19 @@ import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import SakuraParticles from "@/components/SakuraParticles";
 import AdminVideoButton from "@/components/AdminVideoButton";
+import { getVideo } from "@/lib/videoStorage";
 
 const Index = () => {
   const [customVideo, setCustomVideo] = useState<string | null>(null);
 
   useEffect(() => {
-    const savedVideo = localStorage.getItem("custom-hero-video");
-    if (savedVideo) {
-      setCustomVideo(savedVideo);
-    }
+    const loadSavedVideo = async () => {
+      const savedVideo = await getVideo();
+      if (savedVideo) {
+        setCustomVideo(savedVideo);
+      }
+    };
+    loadSavedVideo();
   }, []);
 
   return (
