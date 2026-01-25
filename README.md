@@ -23,6 +23,7 @@ This project focuses on combining modern web design with interactivity and motio
 📺 Creator
 
 Krishna Kant Singh
+
 🔹 YouTube:  https://youtube.com/@aimiweb
 
 🔹 LinkedIn: https://linkedin.com/krishnakantsinghtech
