@@ -1,28 +1,30 @@
-🌐 Animated Portfolio Website
+An interactive and customizable portfolio website that allows users to personalize their experience with dynamic backgrounds — including animated video uploads.
 
-An interactive and customizable portfolio website that lets users personalize their experience with dynamic backgrounds — including animated video uploads.
-
-This project is designed for creators, developers, and designers who want a modern portfolio with motion and personality.
+This project is built for creators, developers, and designers who want a modern portfolio that feels alive, expressive, and unique.
 
 ✨ Features
 
 🎨 Custom Backgrounds
-Easily change the website background to match your style or mood.
+Easily change the website background to match your personal style or theme.
 
 🎥 Upload Animated Background Videos
-Users can upload their own background animation videos (up to 100 MB) for a more immersive and unique look.
+Users can upload their own background animation videos (up to 100 MB) to create a more immersive and visually engaging portfolio.
 
 ⚙️ Personalization Options
-Customize the appearance to create a portfolio that truly represents you.
+Modify the look and feel of the site to build a portfolio that truly represents your personality and creativity.
 
 💻 Modern Portfolio Layout
-Clean and responsive design suitable for showcasing projects, skills, and contact information.
+Clean, responsive design perfect for showcasing projects, skills, and contact details.
 
-🚀 Purpose
+🚀 Project Goal
 
-This project combines web design + interactivity to make personal portfolios more engaging and visually dynamic compared to traditional static portfolio sites.
+This project focuses on combining modern web design with interactivity and motion to make personal portfolios more engaging than traditional static websites.
 
 📺 Creator
 
-Made by AnimiWeb
-YouTube Channel: AnimiWeb — where design meets creativity and web experiments come to life.
+Krishna Kant Singh
+🔹 YouTube:  https://youtube.com/@aimiweb
+
+🔹 LinkedIn: https://linkedin.com/krishnakantsinghtech
+
+Creating web experiences where design meets creativity.
