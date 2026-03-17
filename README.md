@@ -81,6 +81,6 @@ Built for creators, developers, and designers who want a modern portfolio that f
 
 🔹 YouTube: [https://youtube.com/@aimiweb](https://youtube.com/@aimiweb)
 
-🔹 LinkedIn: [https://linkedin.com/krishnakantsinghtech](https://linkedin.com/krishnakantsinghtech)
+
 
 > Creating web experiences where design meets creativity.
