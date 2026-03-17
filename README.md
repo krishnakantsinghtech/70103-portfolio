@@ -1,31 +1,86 @@
+# 🌸 Interactive Portfolio Website
+
 An interactive and customizable portfolio website that allows users to personalize their experience with dynamic backgrounds — including animated video uploads.
 
-This project is built for creators, developers, and designers who want a modern portfolio that feels alive, expressive, and unique.
+Built for creators, developers, and designers who want a modern portfolio that feels alive, expressive, and unique.
 
-✨ Features
+---
 
-🎨 Custom Backgrounds
-Easily change the website background to match your personal style or theme.
+## ✨ Features
 
-🎥 Upload Animated Background Videos
-Users can upload their own background animation videos (up to 100 MB) to create a more immersive and visually engaging portfolio.
+### 🎥 Custom Background Video Upload
+- Upload your own background video (up to **100MB**) directly from the website
+- Videos are stored locally in your browser using **IndexedDB** — no server needed
+- Supported formats: MP4, WebM, and all browser-supported video formats
+- Videos play automatically, loop seamlessly, and are muted for a clean experience
+- Cinematic vignette overlay and gradient fade for a polished, professional look
+- Reset to the default background video at any time
 
-⚙️ Personalization Options
-Modify the look and feel of the site to build a portfolio that truly represents your personality and creativity.
+### ⚙️ Admin Settings Panel
+- A **gear icon button** is located at the **bottom-right corner** of the website
+- Click it to open the admin modal where you can:
+  - **Upload Video**: Select a video file from your device to replace the hero background
+  - **Reset to Default**: Remove the custom video and restore the original background
+- The upload button shows a loading state while the video is being saved
+- File size is validated before upload (max 100MB)
 
-💻 Modern Portfolio Layout
-Clean, responsive design perfect for showcasing projects, skills, and contact details.
+### 🌸 Sakura Particle Effects
+- Floating sakura (cherry blossom) particles animate across the screen
+- Adds a dreamy, atmospheric layer to the overall experience
 
-🚀 Project Goal
+### 💻 Modern Portfolio Layout
+- **Hero Section**: Full-screen video background with animated text introduction
+- **About Section**: Showcase your skills, story, and what you do
+- **Contact Section**: Easy way for visitors to get in touch
+- Clean, responsive design that works on desktop, tablet, and mobile
 
-This project focuses on combining modern web design with interactivity and motion to make personal portfolios more engaging than traditional static websites.
+### 🎨 Design Details
+- Japanese-inspired aesthetic with sakura and moonlight gradient themes
+- Glass-morphism UI elements with blur and transparency effects
+- Smooth scroll animations powered by **Framer Motion**
+- Custom typography with display and body font pairing
+- Dark theme optimized for visual impact
 
-📺 Creator
+---
 
-Krishna Kant Singh
+## 🛠️ How the Video Upload Works
 
-🔹 YouTube:  https://youtube.com/@aimiweb
+### Step-by-Step:
+1. **Click the ⚙️ gear icon** at the bottom-right corner of the page
+2. The admin settings modal will open
+3. Click **"Upload Video"** and select a video file (MP4, WebM, etc.)
+4. The video must be **under 100MB** in size
+5. Once uploaded, the video is saved to **IndexedDB** in your browser
+6. The hero background immediately updates to show your uploaded video
+7. The video persists across page refreshes — no need to re-upload
+8. To go back to the default video, click **"Reset to Default"**
 
-🔹 LinkedIn: https://linkedin.com/krishnakantsinghtech
+### Technical Details:
+- **Storage**: Uses IndexedDB (not localStorage) to handle large video files
+- **Persistence**: Videos survive page refreshes and browser restarts
+- **Performance**: Videos are loaded as Blob URLs for optimal playback
+- **Display**: Videos auto-play, loop, and are muted with enhanced brightness and contrast
+- **Overlay**: A radial vignette gradient and bottom fade blend the video into the page
 
-Creating web experiences where design meets creativity.
+---
+
+## 🚀 Tech Stack
+
+- **React** + **TypeScript** — Component-based UI
+- **Vite** — Fast build tool and dev server
+- **Tailwind CSS** — Utility-first styling
+- **Framer Motion** — Smooth animations and transitions
+- **shadcn/ui** — Accessible UI components
+- **IndexedDB** — Client-side storage for large files
+
+---
+
+## 📺 Creator
+
+**Krishna Kant Singh**
+
+🔹 YouTube: [https://youtube.com/@aimiweb](https://youtube.com/@aimiweb)
+
+🔹 LinkedIn: [https://linkedin.com/krishnakantsinghtech](https://linkedin.com/krishnakantsinghtech)
+
+> Creating web experiences where design meets creativity.
